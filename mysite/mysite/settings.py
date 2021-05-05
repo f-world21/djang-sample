@@ -31,12 +31,13 @@ ALLOWED_HOSTS = []
 
 # Initialize environment variables
 env = environ.Env()
-environ.Env.read_env('../.env')
+environ.Env.read_env()
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -82,7 +83,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_sample32_development',
+        'NAME': 'django-sample32_development',
         'USER': env('DATABASE_USER'),
         'PASSWORD': env('DATABASE_PASSWORD'),
         'HOST': 'localhost',
