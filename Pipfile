@@ -13,6 +13,7 @@ django-environ = "*"
 flake8 = "*"
 autopep8 = "*"
 flake8-import-order = "*"
+mypy = "*"
 
 [requires]
 python_version = "3.8"
